@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font: 13px Arial;
+    color: #555
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center
+}
+
+.small {
+    font-size: 20px
+}
+
+.min-gap {
+    padding: 10px 0;
+    margin: 0
+}
+
+h1, h2, a, em, pre {
+    color: #4183C4
+}
+
+.slide-show-wrapper {
+    border: solid 1px #ccc;
+    margin: 0 auto
+}
+
+.slide {
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30px
+}
+
+pre {
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    border: solid 1px #ddd;
+    display: inline-block;
+    background-color: #fefefe;
+    border-radius: 10px
+}
+
+.em {
+    color: red
+}
+
+.slide-show li ul {
+    width: 355px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: left
+}
+
+.slide-show li ul li {
+    padding: 5px 0
+}
+
+.slide-show li ul li span {
+    display: inline-block;
+    width: 200px
+}
+
+kbd {
+    display: inline-block;
+    border: solid 1px #ccc;
+    padding: 0;
+    font: 30px Arial;
+    padding: 3px 7px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px #DDDDDD
+}

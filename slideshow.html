@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Slideshow.js demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="slideshow.css">
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<h1>Slideshow.js</h1>
+
+<ul id="slide-show" class="slide-show">
+    <li>
+        <div class="slide slide1">
+            <p>Creates slide show from the HTML UL list,<br> rendering list items as slides</p>
+            <p>Github: <a href="https://mark-rolich.guthub.com/Slideshow.js">mark-rolich.github.com/Slideshow.js</a></p>
+            <p>License: The MIT License (MIT)</p>
+            <p>Copyright &copy; 2013 Mark Rolich</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide2">
+            <p><em>Slideshow.js</em> requires <em>Event.js</em> package, <br>which can be acquired at <br>
+            <a href="https://github.com/mark-rolich/Event.js">Github.com</a> and
+            <a href="http://www.jsclasses.org/package/212-JavaScript-Handle-events-in-a-browser-independent-manner.html">JSClasses.org</a></p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide3">
+            <p>Keyboard controls</p>
+            <ul>
+                <li><span>next</span> <kbd>Ctrl</kbd> + <kbd>&#8594;</kbd></li>
+                <li><span>previous</span> <kbd>Ctrl</kbd> + <kbd>&#8592;</kbd></li>
+                <li><span>play / pause</span> <kbd>Ctrl</kbd> + <kbd>&#9251;</kbd></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide4">
+            <h2>How to use</h2>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide5">
+            <p>Include CSS stylesheet</p>
+            <pre><code>&lt;head&gt;
+...
+<span class="em">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;slideshow.css&quot;&gt;</span>
+...
+&lt;/head&gt;</code></pre>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide6">
+            <p>Create HTML markup for slideshow</p>
+            <pre><code>&lt;ul id=&quot;<span class="em">my-slide-show</span>&quot; class=&quot;slide-show&quot;&gt;
+    &lt;li&gt;&lt;div class=&quot;slide1&quot;&gt;Slide 1&lt;/div&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p class=&quot;slide2&quot;&gt;Slide 2&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;slide3&quot;&gt;Slide 3&lt;/span&gt;&lt;/li&gt;
+    ...
+    ...
+&lt;/ul&gt;</code></pre>
+            <p class="small">You can use any element inside LI tags</li>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide7">
+            <p>Include libraries and initialize slide show</p>
+            <pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;Event.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Slideshow.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+new Slideshow(new Event(), '<span class="em">my-slide-show</span>');
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide8">
+            <h2>Options</h2>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide9">
+            <p style="margin: 0 0 10px 0">Set sliding speed (50px per 10ms default)</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'speed': 70
+});</code></pre>
+        <p class="small min-gap">Slide will move by 70px per 10ms</p>
+        <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'speed': 1
+});</code></pre>
+        <p class="small min-gap">1px per 10ms - minimum speed</p>
+        <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'speed': 900
+});</code></pre>
+        <p class="small min-gap">900px per 10ms - maximum speed (current slide size)</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide10">
+            <p>Set play speed (1s default)</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'playSpeed': 2
+});</code></pre>
+        <p class="small">Slides change in 2s</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide11">
+            <p>Autoplay</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'autoplay': 1
+});</code></pre>
+        <p class="small">Slide show starts immediately</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide12">
+            <p>Play button off</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'playButton': 0
+});</code></pre>
+        <p class="small">Keyboard play / pause control will be disabled too</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide13">
+            <p>Info panel off</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'info': 0
+});</code></pre>
+        <p class="small">Info panel showing slide count and current slide number will be hidden</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide14">
+            <p>Disable all controls</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'noControls': 1
+});</code></pre>
+        <p class="small">All keyboard controls will be disabled as well</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide15">
+            <p>First-to-Last slide show mode</p>
+            <pre><code>new Slideshow(new Event(), 'my-slide-show', {
+    'mode': 'ftl'
+});</code></pre>
+        <p class="small">First slide has no 'previous' button,<br>
+        last slide has no 'next' and play/pause button</p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide16">
+            <p>Display slide show in open-ended mode (by default)</p>
+            <pre><code>new Slideshow (new Event(), 'my-slide-show', {
+    'mode': 'open-end'
+});</code></pre>
+        <p class="small">Slideshow allows to proceed from the first and last slide back or next. </p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide17">
+            <p>Found an issue ? Post it <a href="https://github.com/mark-rolich/Slideshow.js/issues">here</a></p>
+        </div>
+    </li>
+    <li>
+        <div class="slide slide18">
+            <p>Thanks !</p>
+        </div>
+    </li>
+</ul>
+
+<a href="https://github.com/mark-rolich"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+<script type="text/javascript" src="https://raw.github.com/mark-rolich/Event.js/master/Event.js"></script>
+<script type="text/javascript" src="Slideshow.js"></script>
+<script>
+new Slideshow(new Event(), 'slide-show', {
+    'mode': 'ftl'
+});
+</script>
+</body>
+</html>
