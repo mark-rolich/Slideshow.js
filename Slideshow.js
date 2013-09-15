@@ -319,7 +319,7 @@ var Slideshow = function (evt, ssId, settings) {
 
     if (noControls === 0) {
         evt.attach('keyup', document, function (e) {
-            if (e.keyCode === 32) {
+            if (e.keyCode === 32 && hovered === 1) {
                 evt.prevent(e);
             }
         });
