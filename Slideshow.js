@@ -318,6 +318,12 @@ var Slideshow = function (evt, ssId, settings) {
     }
 
     if (noControls === 0) {
+        evt.attach('keyup', document, function (e) {
+            if (e.keyCode === 32) {
+                evt.prevent(e);
+            }
+        });
+
         evt.attach('keydown', document, function (e) {
             if (e.ctrlKey === true) {
                 switch (e.keyCode) {
