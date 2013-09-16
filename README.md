@@ -1,7 +1,7 @@
 Slideshow.js
 =================
 
-Creates slide show from the HTML UL list, rendering list items as slides
+Creates slide show from the HTML UL list, rendering list items as slides.
 Demo is available at http://mark-rolich.github.com/Slideshow.js
 
 Slideshow.js requires Event.js which can be acquired at the following links:
